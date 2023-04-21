@@ -21,7 +21,7 @@ return new class extends Migration
                     ->references('id')
                     ->on('players')
                     ->onDelte('cascade')
-                    ->onUpdate('cascade');
+                    ->onUpdate('cascade')
             $table->timestamps();
         });
     }

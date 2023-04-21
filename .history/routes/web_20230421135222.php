@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +20,6 @@ Route::get('/', function () {
 
 Route::get('index', [LoginController::class, 'index'])->name('login');
 Route::get('new-form', [RegisterController::class, 'create'])->name('new-form');
-Route::post('new-player', [RegisterController::class, 'store'])->name('new-player');
+Route::post('new-player', [LoginController::class, 'store'])->name('new-player');
 
 

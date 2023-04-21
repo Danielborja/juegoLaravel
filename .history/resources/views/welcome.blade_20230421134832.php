@@ -18,7 +18,7 @@
         <h1>Bienvenido al PPT</h1>
     <ul>
         <li><a href="{{ route('login') }}">Login</a></li>
-        <li><a href="{{ route('new-form') }}">Registrarse</a></li>
+        <li><a href="{{ route('register') }}">Registrarse</a></li>
         {{-- <li><a href="{{ route('register') }}">Registrarse como paciente o doctor</a></li> --}}
     </ul>
 
