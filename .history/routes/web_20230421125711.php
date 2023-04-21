@@ -15,7 +15,7 @@ use App\Http\Controllers\LoginController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
-Route::get('index', [LoginController::class, 'index'])->name('login');
+Route::get('index', [LoginController::class, 'index'])->name('login.index');

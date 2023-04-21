@@ -15,13 +15,7 @@
     </head>
     <body class="antialiased">
 
-        <form>
-          <label>Usuario</label>
-          <input name="name"></input>
-          <label>Contraseña</label>
-          <input name="password"></input>
-          <button type="submit">Submit</button>
-        </form>
+        <a> </a>
 
     </body>
 </html>

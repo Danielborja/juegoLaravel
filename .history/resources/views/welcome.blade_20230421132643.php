@@ -15,13 +15,11 @@
     </head>
     <body class="antialiased">
 
-        <form>
-          <label>Usuario</label>
-          <input name="name"></input>
-          <label>Contraseña</label>
-          <input name="password"></input>
-          <button type="submit">Submit</button>
-        </form>
+        <h1>Bienvenido al sistema de control de citas</h1>
+    <ul>
+        <li><a href="{{ view('login') }}">Iniciar sesión como paciente o doctor</a></li>
+        {{-- <li><a href="{{ route('register') }}">Registrarse como paciente o doctor</a></li> --}}
+    </ul>
 
     </body>
 </html>
