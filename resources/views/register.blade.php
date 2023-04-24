@@ -15,7 +15,8 @@
     </head>
     <body class="antialiased">
 
-        <form action="/new-form"  method="POST" >
+        <form action="/new-player"  method="POST" >
+          @csrf
           <label>Usuario</label>
           <input name="name"></input>
           <label>Contraseña</label>

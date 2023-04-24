@@ -28,7 +28,8 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $player = Player::create(['name'=> $request->name,'password'=> $request->password]);
+        return view("registrocompletado", compact(['player']));
     }
 
     /**
