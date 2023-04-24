@@ -15,7 +15,8 @@
     </head>
     <body class="antialiased">
 
-        <form>
+        <form action="/iniciar"  method="POST" >
+          @csrf
           <label>Usuario</label>
           <input name="name"></input>
           <label>Contraseña</label>

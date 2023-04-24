@@ -18,8 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('index', [LoginController::class, 'index'])->name('login');
+Route::get('index', [LoginController::class, 'create'])->name('login');
+Route::post('iniciar', [LoginController::class, 'store'])->name('iniciar');
+
 Route::get('new-form', [RegisterController::class, 'create'])->name('new-form');
 Route::post('new-player', [RegisterController::class, 'store'])->name('new-player');
+
+// Route::get('index', [LoginController::class, 'index'])->name('login');
+// Route::get('new-form', [RegisterController::class, 'create'])->name('new-form');
+// Route::post('new-player', [RegisterController::class, 'store'])->name('new-player');
 
 

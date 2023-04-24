@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Player;
 
@@ -9,10 +10,10 @@ class LoginController extends Controller
 {
     /**
      * Display a listing of the resource.
-     */
+     */  
     public function index()
     {
-        return view('login');
+
     }
 
     /**
@@ -20,7 +21,7 @@ class LoginController extends Controller
      */
     public function create()
     {
-        //
+        return view('login');
     }
 
     /**
@@ -28,7 +29,19 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $usuario = $request->name;
+        $contrasena = $request->password;
+
+        $siusuario = DB::table('players')
+                ->where('name', $usuario)
+                ->where('password', $contrasena)
+                ->first();
+
+        if ($siusuario){
+            return view('juego');
+        }else{
+            return view('login');
+        }
     }
 
     /**
