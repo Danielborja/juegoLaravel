@@ -36,9 +36,15 @@ class LoginController extends Controller
                 ->where('name', $usuario)
                 ->where('password', $contrasena)
                 ->first();
+        
+        $id = DB::table('players')
+                ->select('players.id')
+                ->where('players.name', '=', $usuario)
+                ->where('players.password', '=', $contrasena)
+                ->get();
 
         if ($siusuario){
-            return view('juego');
+            return view('juego',compact('id'));
         }else{
             return view('login');
         }
