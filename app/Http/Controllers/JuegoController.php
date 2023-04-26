@@ -36,30 +36,39 @@ class JuegoController extends Controller
         }
         
         $maquina = $this -> random();
+        
+        $cuentaGanadas=0;
+        $cuentaPerdidas=0;
 
         if ($valorBoton == 0 and $maquina = 0) {    
             return view ("empate",compact('maquina'));
         }
         
         elseif ($valorBoton == 0 and $maquina = 1) {
+            $cuentaPerdidas = 1;
             return view ("gameover",compact('maquina'));
         }
         elseif ($valorBoton == 0 and $maquina = 2) {
+            $cuentaGanadas = 1; 
             return view ("winner",compact('maquina'));
         }
         elseif ($valorBoton == 1 and $maquina = 0) {
+            $cuentaGanadas = 1; 
             return view ("winner",compact('maquina'));
         }
         elseif ($valorBoton == 1 and $maquina = 1) {
             return view ("empate",compact('maquina'));
         }
         elseif ($valorBoton == 1 and $maquina = 2) {
+            $cuentaPerdidas = 1;
             return view ("gameover",compact('maquina'));
         }
         elseif ($valorBoton == 2 and $maquina = 0) {
+            $cuentaPerdidas = 1;
             return view ("gameover",compact('maquina'));
         }
         elseif ($valorBoton == 2 and $maquina = 1) {
+            $cuentaGanadas = 1; 
             return view ("winner",compact('maquina'));
         }
         elseif ($valorBoton == 2 and $maquina = 2) {
