@@ -7,10 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <center>
+    <form action="/resultado_boton/{{$id}}"  method="POST">
+    @csrf
     <button style="width: 150px; height: 50px;" value="0"; name="piedra">✊</button>
     <button style="width: 150px; height: 50px;" value="1"; name="papel">✋</button>
     <button style="width: 150px; height: 50px;" value="2" ;name="tijera">✌</button>
-    </center>
+    </form>
 </body>
 </html>
